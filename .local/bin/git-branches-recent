@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+git for-each-ref --sort=-creatordate --count=10 --format="%(refname:short)|%(creatordate:relative)|%(authorname)" refs/remotes/ | while IFS="|" read -r branch created author; do
+  printf "\e[0;32m%s\e[0m %s \e[0;34m%s\e[0m\n" "$branch" "$created" "$author"
+done
