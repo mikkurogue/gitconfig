@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if [ "$1" = "recent" ]; then
+  shift
+  exec git-branches-recent "$@"
+else
+  echo "Usage: git branches recent"
+  exit 1
+fi
