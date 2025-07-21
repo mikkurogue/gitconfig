@@ -1,0 +1,9 @@
+[alias]
+    undo = reset --mixed HEAD~1
+    unstage = reset HEAD --
+    lg = log --oneline --graph --all --decorate
+    last = log -1 HEAD
+    hist = log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
+    amend = commit --amend --no-edit
+    fix = commit --amend
+    discard = checkout --
